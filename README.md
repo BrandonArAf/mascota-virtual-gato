@@ -1,45 +1,53 @@
-# 🐾 Mascota Virtual (Gatito de Escritorio)
+# Súper Mascota Virtual (Gato Noir) 🐈‍⬛
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![PyQt5](https://img.shields.io/badge/PyQt5-GUI-green.svg)
-![License](https://img.shields.io/badge/License-MIT-purple)
+¡Bienvenido al proyecto de tu nueva mascota de escritorio virtual! Este código te permite tener un gatito negro paseándose y descansando directamente en la parte inferior de tu pantalla mientras trabajas.
 
-Un divertido gatito interactivo que pasea, duerme y reacciona directamente sobre el escritorio de tu ordenador. Construido puramente en Python con la potencia gráfica de **PyQt5** para lograr una transparencia perfecta (canal alfa) sin bordes feos ni bloqueos de interfaz.
+## Características
 
-## ✨ Características Principales
+* **Animaciones suaves:** El gato camina hacia la izquierda, derecha, te sigue y hasta toma pequeñas pausas para descansar y respirar.
+* **Sigue tu ratón:** Puedes activar el modo **"🎯 Seguir al ratón"** desde el menú contextual y él irá directamente hacia ti.
+* **Totalmente independiente:** Se ejecuta por encima de todas las ventanas para que siempre lo tengas a la vista y puedas cuidarlo.
+* **Icono en Sistema:** Administra tus gatos desde la esquina inferior derecha de la pantalla en Windows (el *System Tray*).
+* **¡Puedes clonarlo!:** ¿Un gato no es suficiente? Créale amiguitos al instante y llena tu pantalla.
 
-* **Libre por el escritorio**: Camina automáticamente por encima de la barra de tareas y da la vuelta de forma inteligente al chocar con los bordes de tu pantalla.
-* **Físicas de Gravedad**: ¡Atrápalo! Si lo arrastras con el botón izquierdo hacia la cima de tu pantalla y lo sueltas, caerá suavemente obedeciendo a la gravedad.
-* **Mimos (Doble Clic)**: ¡Acarícialo! Un doble clic generará una linda animación de corazones flotantes (❤️).
-* **Las siestas son importantes (Zzz)**: Si lo ignoras por más de 30 segundos, entrará en fase de sueño profundo y empezará a soltar burbujitas exhalando un tierno "Zzz...".
-* **Bandeja de Sistema Inteligente (Tray Icon)**: Control total en todo momento. Puedes "esconder" al gato si necesitas trabajar súper concentrado y hacer que vuelva cuando lo necesites directamente desde el icono de la bandeja de Windows.
-* **Menú Contextual Avanzado**: Haz clic derecho directamente sobre el gato para alternar su nivel de energía (Modo caminar tranquilo o Modo correr) o para cerrarlo del todo.
+## Requisitos 📥
 
-## 🚀 Cómo jugar (Para Desarrolladores)
+Para correr el código fuente por tu cuenta necesitas tener **Python 3.x** instalado. Luego, debes instalar la librería `PyQt5`.
 
-1. Clona este repositorio o descarga el ZIP.
-2. Instala la dependencia gráfica (PyQt5):
+Abre tu terminal y ejecuta:
+```bash
+pip install PyQt5
+```
+
+## ¿Cómo jugar con el gato? 🪄
+
+1. Clona el repositorio:
    ```bash
-   pip install PyQt5
+   git clone https://github.com/BrandonArAf/mascota-virtual-gato.git
    ```
-3. Ejecuta el archivo principal:
+2. Entra a la carpeta:
    ```bash
-   python main.py
+   cd mascota-virtual-gato
+   ```
+3. Ejecútalo con Python:
+   ```bash
+   python gato_virtual_main.py
    ```
 
-## 📦 Exportar y Empaquetar a un (.exe)
+## Crea tu propio '.exe' (Ejecutable)
 
-Si quieres enviar este programa a tus amigos y que lo disfruten sin saber nada de código o terminales, se ha configurado el proyecto para empaquetarlo ágilmente con PyInstaller, incluyendo todas las imágenes de forma embebida.
+Si deseas compartir el gato negro con tus amigos sin que tengan que instalar Python, puedes empaquetarlo con `PyInstaller`:
 
-1. Instala PyInstaller:
+1. Instala PyInstaller: 
    ```bash
    pip install pyinstaller
    ```
-2. Ejecuta este comando exacto en la carpeta raíz del proyecto:
+2. Corre el script de creación (*asegúrate de correr el script del ícono antes si lo modificaste*):
    ```bash
-   pyinstaller --noconsole --name="MascotaVirtual" --onefile --add-data "assets;assets" main.py
+   python -m PyInstaller --noconsole --windowed --icon="gato_icon.ico" --add-data "frames/reposa;frames/reposa" --add-data "frames/camina;frames/camina" gato_virtual_main.py
    ```
-3. ¡Tu archivo `.exe` estará mágicamente listo para compartir dentro de la carpeta `dist/`!
+
+El resultado final, tu gatito empaquetado y portátil, aparecerá en la carpeta `dist`.
 
 ---
-*Hecho para darle un poco de vida a tu escritorio mientras programas.*
+¡Diviértete con tu nueva mascota! Desarrollado con ❤️ para Brandon.
