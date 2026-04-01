@@ -2,6 +2,12 @@
 
 ¡Bienvenido al proyecto de tu nueva mascota de escritorio virtual! Este código te permite tener un gatito negro paseándose y descansando directamente en la parte inferior de tu pantalla mientras trabajas.
 
+## 🚀 Descarga Rápida (¡No requiere instalación!)
+
+Si solo quieres tener al gatito en tu pantalla y no te interesa programar, ¡descarga la aplicación lista para usar!
+Simplemente haz clic en el siguiente archivo y ejecútalo (puede que Windows SmartScreen te pregunte si confías en él, dale a "Ejecutar de todas formas"):
+👉 **[Descargar gato_virtual_main.exe](gato_virtual_main.exe)**
+
 ## Características
 
 * **Animaciones suaves:** El gato camina hacia la izquierda, derecha, te sigue y hasta toma pequeñas pausas para descansar y respirar.
